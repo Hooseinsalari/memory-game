@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        mochiy: ['Mochiy Pop One', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }
