@@ -2,6 +2,7 @@ import { Item } from "../interfaces";
 
 const items: Item[] = [
   {
+    isActive: false,
     id: 0,
     title: "bug",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -10,6 +11,7 @@ const items: Item[] = [
       `,
   },
   {
+    isActive: false,
     id: 1,
     title: "bug",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -18,6 +20,7 @@ const items: Item[] = [
       `,
   },
   {
+    isActive: false,
     id: 2,
     title: "cloud",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -25,6 +28,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 3,
     title: "cloud",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -32,6 +36,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 4,
     title: "cpu",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -40,6 +45,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 5,
     title: "cpu",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -48,6 +54,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 6,
     title: "desktop",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -55,6 +62,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 7,
     title: "desktop",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -62,6 +70,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 8,
     title: "dropper",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -69,6 +78,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 9,
     title: "dropper",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -76,6 +86,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 10,
     title: "lock",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -83,6 +94,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 11,
     title: "lock",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -90,6 +102,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 12,
     title: "rocket",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -98,6 +111,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 13,
     title: "rocket",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -106,6 +120,7 @@ const items: Item[] = [
   </svg>`,
   },
   {
+    isActive: false,
     id: 14,
     title: "scale",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -114,6 +129,7 @@ const items: Item[] = [
   `,
   },
   {
+    isActive: false,
     id: 15,
     title: "scale",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
