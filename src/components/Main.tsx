@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 // interfaces
-import { Item, Props } from "../interfaces";
+import { Item, MainProps } from "../interfaces";
 
-const Main: React.FunctionComponent<Props> = ({cartGame, setCartGame}) => {
+const Main: React.FunctionComponent<MainProps> = ({
+  cartGame,
+  setCartGame,
+  setStartTimer,
+}) => {
   const [activeCart, setActiveCart] = useState<Item[]>([]);
   const [cartClicked, setCartClicked] = useState<number>(0);
 
@@ -24,6 +28,12 @@ const Main: React.FunctionComponent<Props> = ({cartGame, setCartGame}) => {
 
     if (cartClicked < 2) {
       setCartClicked((prevState) => (prevState += 1));
+    }
+
+    setStartTimer(true);
+
+    if (cartGame.every((i) => i.isActive)) {
+      setStartTimer(false);
     }
   };
 
@@ -61,11 +71,11 @@ const Main: React.FunctionComponent<Props> = ({cartGame, setCartGame}) => {
   };
 
   return (
-    <div className="grid grid-rows-4 grid-cols-4 mt-16">
+    <div className="grid grid-rows-4 grid-cols-4 justify-items-center gap-y-8 mt-14 max-w-xl m-auto">
       {cartGame.map((i) => (
         <button
           key={i.id}
-          className={`w-12 h-12 m-auto mt-4 rounded-full p-2 text-gray-50 ${
+          className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full p-2 text-gray-50 ${
             i.isActive ? "bg-gray-400 animate-flip" : "bg-slate-800"
           }`}
           onClick={() => activityHandler(i.id)}
