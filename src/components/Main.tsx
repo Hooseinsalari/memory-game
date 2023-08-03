@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-// data
-import items from "../constant";
-
-// function
-import { shuffleArray } from "../helper/function";
-
 // interfaces
-import { Item } from "../interfaces";
+import { Item, Props } from "../interfaces";
 
-const Main: React.FunctionComponent = () => {
-  const [cartGame, setCartGame] = useState<Item[]>(shuffleArray([...items]));
+const Main: React.FunctionComponent<Props> = ({cartGame, setCartGame}) => {
   const [activeCart, setActiveCart] = useState<Item[]>([]);
   const [cartClicked, setCartClicked] = useState<number>(0);
 
@@ -65,15 +58,6 @@ const Main: React.FunctionComponent = () => {
       setActiveCart([]);
       setCartClicked(0);
     }, 500);
-  };
-
-  const checkCart = () => {
-    if (
-      activeCart.length === 2 &&
-      activeCart[0].title === activeCart[1].title
-    ) {
-      return "bg-blue-600";
-    }
   };
 
   return (
