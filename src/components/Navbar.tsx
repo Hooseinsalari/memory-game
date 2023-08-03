@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="container w-full m-auto flex items-start sm:items-center justify-between">
+    <div className="container max-w-xl w-full m-auto flex items-start sm:items-center justify-between">
       <h3 className="font-thin text-base sm:text-lg">Memory</h3>
 
       <div className="relative">
