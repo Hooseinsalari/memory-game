@@ -7,11 +7,15 @@ const Navbar = () => {
     setIsOpen((prevState) => !prevState);
   };
 
+  const gameEventHandler = () => {
+    window.location.reload()
+  }
+
   return (
     <div className="container max-w-xl w-full m-auto flex items-start sm:items-center justify-between">
       <h3 className="font-thin text-base sm:text-lg">Memory</h3>
 
-      <div className="relative">
+      <div className="relative z-50">
         <button
           onClick={modalHandler}
           className="bg-orange-500 py-2 px-4 rounded-3xl text-white text-sm sm:hidden"
@@ -28,10 +32,10 @@ const Navbar = () => {
           sm:flex-row sm:scale-100 sm:visible sm:opacity-100 sm:w-auto sm:bg-transparent sm:shadow-none sm:static sm:p-0
           `}
         >
-          <button className="bg-orange-500 py-2 px-4 text-xs sm:text-sm rounded-3xl text-white hover:shadow-xl transition duration-300 ease-in-out">
+          <button onClick={gameEventHandler} className="bg-orange-500 py-2 px-4 text-xs sm:text-sm rounded-3xl text-white hover:shadow-xl transition duration-300 ease-in-out">
             Restart
           </button>
-          <button className="bg-gray-300 py-2 px-4 text-xs sm:text-sm rounded-3xl hover:shadow-xl transition duration-300 ease-in-out">
+          <button onClick={gameEventHandler} className="bg-gray-300 py-2 px-4 text-xs sm:text-sm rounded-3xl hover:shadow-xl transition duration-300 ease-in-out">
             New Game
           </button>
         </div>
