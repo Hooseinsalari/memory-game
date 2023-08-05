@@ -6,10 +6,9 @@ import { cartGameContext } from "../context/CartGameContextProvider";
 // interfaces
 import { Item, MainProps } from "../interfaces";
 
-const Main: React.FunctionComponent<MainProps> = ({ setStartTimer }) => {
+const Main: React.FunctionComponent<MainProps> = ({ setStartTimer, countClick, setCountClick }) => {
   const { cartGame, setCartGame } = useContext(cartGameContext)!;
   const [activeCart, setActiveCart] = useState<Item[]>([]);
-  const [cartClicked, setCartClicked] = useState<number>(0);
 
   const activityHandler = (id: number) => {
     const newCartGame = [...cartGame];
@@ -17,7 +16,7 @@ const Main: React.FunctionComponent<MainProps> = ({ setStartTimer }) => {
 
     if (
       selectedCart?.isActive === false &&
-      cartClicked < 2 &&
+      countClick < 2 &&
       activeCart.length <= 2
     ) {
       selectedCart.isActive = true;
@@ -26,8 +25,8 @@ const Main: React.FunctionComponent<MainProps> = ({ setStartTimer }) => {
 
     setCartGame(newCartGame);
 
-    if (cartClicked < 2) {
-      setCartClicked((prevState) => (prevState += 1));
+    if (countClick < 2) {
+      setCountClick((prevState) => (prevState += 1));
     }
 
     setStartTimer(true);
@@ -54,7 +53,7 @@ const Main: React.FunctionComponent<MainProps> = ({ setStartTimer }) => {
       return modifiedObj ? { ...modifiedObj } : obj;
     });
     setCartGame([...updatedCartGame]);
-    setCartClicked(0);
+    setCountClick(0);
     setActiveCart([]);
   };
 
@@ -66,7 +65,7 @@ const Main: React.FunctionComponent<MainProps> = ({ setStartTimer }) => {
     setTimeout(() => {
       setCartGame([...updatedCartGame]);
       setActiveCart([]);
-      setCartClicked(0);
+      setCountClick(0);
     }, 500);
   };
 

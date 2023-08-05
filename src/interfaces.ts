@@ -7,10 +7,13 @@ export interface Item {
 
 export interface MainProps {
   setStartTimer: React.Dispatch<React.SetStateAction<boolean>>;
+  countClick: number;
+  setCountClick: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export interface FooterProps {
   startTimer: boolean;
+  countClick: number;
 }
 
 export interface CartGameContext {
