@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+
+// context
+import { cartGameContext } from "../context/CartGameContextProvider";
 
 // interfaces
 import { Item, MainProps } from "../interfaces";
 
-const Main: React.FunctionComponent<MainProps> = ({
-  cartGame,
-  setCartGame,
-  setStartTimer,
-}) => {
+const Main: React.FunctionComponent<MainProps> = ({ setStartTimer }) => {
+  const { cartGame, setCartGame } = useContext(cartGameContext)!;
   const [activeCart, setActiveCart] = useState<Item[]>([]);
   const [cartClicked, setCartClicked] = useState<number>(0);
 

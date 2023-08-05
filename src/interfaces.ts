@@ -6,11 +6,18 @@ export interface Item {
 }
 
 export interface MainProps {
-  cartGame: Item[];
-  setCartGame: React.Dispatch<React.SetStateAction<Item[]>>;
   setStartTimer: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface FooterProps {
   startTimer: boolean;
+}
+
+export interface CartGameContext {
+  children: React.ReactNode;
+}
+
+export interface CartGameContextValue {
+  cartGame: Item[];
+  setCartGame: React.Dispatch<React.SetStateAction<Item[]>>;
 }
