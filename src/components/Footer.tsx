@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ startTimer, countClick }) => {
   }, [startTimer]);
 
   return (
-    <div className="flex items-center max-w-xl m-auto justify-between mt-28 gap-16">
+    <div className="flex items-center max-w-xl m-auto justify-between gap-16">
       <div className="bg-gray-400 py-2 px-4 rounded-md w-1/2 text-center">
         <h3 className="text-xs mb-1 text-slate-600">Time</h3>
         <h2 className="text-sm text-slate-800">{convertTime(timer)}</h2>

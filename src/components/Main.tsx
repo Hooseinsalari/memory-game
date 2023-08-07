@@ -70,7 +70,7 @@ const Main: React.FunctionComponent<MainProps> = ({ setStartTimer, countClick, s
   };
 
   return (
-    <div className="grid grid-rows-4 grid-cols-4 justify-items-center gap-y-8 mt-28 max-w-xl m-auto">
+    <div className="grid grid-rows-4 grid-cols-4 justify-items-center gap-y-8 mt-20 mb-24 sm:mt-16 sm:mb-20 max-w-xl m-auto">
       {cartGame.map((i) => (
         <button
           key={i.id}
