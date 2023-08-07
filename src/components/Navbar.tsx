@@ -1,15 +1,30 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const modalRef = useRef<HTMLDivElement>(null!);
 
   const modalHandler = () => {
     setIsOpen((prevState) => !prevState);
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as Node;
+    if (modalRef.current && !modalRef.current.contains(target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const gameEventHandler = () => {
-    window.location.reload()
-  }
+    window.location.reload();
+  };
 
   return (
     <div className="container max-w-xl w-full m-auto flex items-start sm:items-center justify-between">
@@ -31,11 +46,18 @@ const Navbar = () => {
           }
           sm:flex-row sm:scale-100 sm:visible sm:opacity-100 sm:w-auto sm:bg-transparent sm:shadow-none sm:static sm:p-0
           `}
+          ref={modalRef}
         >
-          <button onClick={gameEventHandler} className="bg-orange-500 py-2 px-4 text-xs sm:text-sm rounded-3xl text-white hover:shadow-xl transition duration-300 ease-in-out">
+          <button
+            onClick={gameEventHandler}
+            className="bg-orange-500 py-2 px-4 text-xs sm:text-sm rounded-3xl text-white hover:shadow-xl transition duration-300 ease-in-out"
+          >
             Restart
           </button>
-          <button onClick={gameEventHandler} className="bg-gray-300 py-2 px-4 text-xs sm:text-sm rounded-3xl hover:shadow-xl transition duration-300 ease-in-out">
+          <button
+            onClick={gameEventHandler}
+            className="bg-gray-300 py-2 px-4 text-xs sm:text-sm rounded-3xl hover:shadow-xl transition duration-300 ease-in-out"
+          >
             New Game
           </button>
         </div>
