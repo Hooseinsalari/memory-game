@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="container max-w-xl w-full m-auto flex items-start sm:items-center justify-between">
       <h3 className="font-thin text-base sm:text-lg">Memory</h3>
 
-      <div className="relative z-50">
+      <div className="relative z-10">
         <button
           onClick={modalHandler}
           className="bg-orange-500 py-2 px-4 rounded-3xl text-white text-sm sm:hidden"

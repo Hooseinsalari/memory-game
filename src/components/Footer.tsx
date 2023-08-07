@@ -11,8 +11,6 @@ const Footer: React.FC<FooterProps> = ({ startTimer, countClick }) => {
   const [move, setMove] = useState<number>(0);
 
   useEffect(() => {
-    console.log(countClick);
-
     if (countClick > 0) {
       setMove((prevMove) => prevMove + 1);
     }

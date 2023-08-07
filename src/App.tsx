@@ -7,6 +7,7 @@ import CartGameContextProvider from "./context/CartGameContextProvider";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Message from "./components/Message";
 
 function App() {
   const [startTimer, setStartTimer] = useState<boolean>(false);
@@ -15,6 +16,7 @@ function App() {
   return (
     <CartGameContextProvider>
       <div className="h-screen bg-gray-100 w-full p-8 font-mochiy">
+        <Message />
         <Navbar />
         <Main
           setStartTimer={setStartTimer}
