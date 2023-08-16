@@ -5,7 +5,7 @@ export interface Item {
   isActive: boolean;
 }
 
-export interface MainProps {
+export interface MemoryBoardProps {
   setStartTimer: React.Dispatch<React.SetStateAction<boolean>>;
   countClick: number;
   setCountClick: React.Dispatch<React.SetStateAction<number>>;

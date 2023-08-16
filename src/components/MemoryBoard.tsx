@@ -4,9 +4,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { cartGameContext } from "../context/CartGameContextProvider";
 
 // interfaces
-import { Item, MainProps } from "../interfaces";
+import { Item, MemoryBoardProps } from "../interfaces";
 
-const Main: React.FunctionComponent<MainProps> = ({ setStartTimer, countClick, setCountClick }) => {
+const MemoryBoard: React.FunctionComponent<MemoryBoardProps> = ({ setStartTimer, countClick, setCountClick }) => {
   const { cartGame, setCartGame } = useContext(cartGameContext)!;
   const [activeCart, setActiveCart] = useState<Item[]>([]);
 
@@ -89,4 +89,4 @@ const Main: React.FunctionComponent<MainProps> = ({ setStartTimer, countClick, s
   );
 };
 
-export default Main;
+export default MemoryBoard;

@@ -4,7 +4,7 @@ import { useState } from "react";
 import CartGameContextProvider from "./context/CartGameContextProvider";
 
 // components
-import Main from "./components/Main";
+import MemoryBoard from "./components/MemoryBoard";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Message from "./components/Message";
@@ -18,7 +18,7 @@ function App() {
       <div className="h-screen bg-gray-100 w-full p-8 font-mochiy">
         <Message />
         <Navbar />
-        <Main
+        <MemoryBoard
           setStartTimer={setStartTimer}
           countClick={countClick}
           setCountClick={setCountClick}
